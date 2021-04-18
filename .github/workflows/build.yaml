@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0
     
     - name: Build image
-      run: docker build --tag ssh-tunnel .
+      run: docker build --tag tep-jenkins .
 
     - name: Log into GitHub Container Registry
       run: echo "${{ secrets.CR_PAT }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
