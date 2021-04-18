@@ -2,6 +2,17 @@
 
 The Jenkins image for TEP.
 
+## Docker Run
+
+### Environment Variables
+
+* ADMIN_USERNAME
+* ADMIN_PASSWORD
+* VAULT_ROLE_ID
+* VAULT_SECRET_ID
+* SSH_PRIVATE_KEY
+* URL
+
 ## Plugin Documentation
 
 * https://github.com/jenkinsci/hashicorp-vault-plugin#configuration-as-code

@@ -7,6 +7,6 @@ jenkins:
       allowsSignup: false
       enableCaptcha: false
       users:
-      - id: "tom"
+      - id: ${ADMIN_USERNAME}
         password: ${ADMIN_PASSWORD}
         name: "Thomas Holmes"
