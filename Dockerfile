@@ -1,5 +1,6 @@
 FROM jenkins/jenkins:lts
 
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 ENV PLUGINS_FORCE_UPGRADE=true
 
 COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
