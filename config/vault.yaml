@@ -1,0 +1,24 @@
+unclassified:
+  hashicorpVault:
+    configuration:
+      vaultCredentialId: "vaultToken"
+      vaultUrl: "https://vault.internal"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - vaultAppRoleCredential:
+              description: "Uber Token"
+              id: "vault-approle"
+              scope: GLOBAL
+              secretId: ${VAULT_SECRET_ID}
+              roleId: ${VAULT_ROLE_ID}
+          - basicSSHUserPrivateKey:
+              scope: GLOBAL
+              id: git-key
+              username: ssh_root
+              description: "SSH with private key. Private key provided"
+              privateKeySource:
+                directEntry:
+                  privateKey: ${SSH_PRIVATE_KEY}

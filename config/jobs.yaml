@@ -1,0 +1,26 @@
+# inspired by https://github.com/jenkinsci/job-dsl-plugin/wiki/JCasC
+jobs:
+  - script: >
+      job('create-jobs') {
+        scm {
+          git {
+            remote {
+              github('tep-infrastructure/tep-jenkins-jobs', 'ssh')
+              credentials('git-key')
+            }
+          }
+        }
+        triggers {
+          scm('H/15 * * * *')
+        }
+        wrappers {
+          injectPasswords {
+            injectGlobalPasswords()
+          }
+        }
+        steps {
+          dsl {
+            external('jobs/*.groovy')
+          }
+        }
+      }

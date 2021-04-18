@@ -1,0 +1,9 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "tom"
+        password: ${ADMIN_PASSWORD}
+        name: "Thomas Holmes"
