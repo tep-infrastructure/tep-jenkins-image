@@ -26,4 +26,5 @@ credentials:
               fileName: "config"
               id: "kube"
               scope: GLOBAL
+              description: ${kube-config}
               secretBytes: ${kube-config}
