@@ -22,3 +22,8 @@ credentials:
               privateKeySource:
                 directEntry:
                   privateKey: ${SSH_PRIVATE_KEY}
+          - file:
+              fileName: "config"
+              id: "kube"
+              scope: GLOBAL
+              secretBytes: ${kube-config}
