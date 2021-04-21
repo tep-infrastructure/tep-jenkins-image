@@ -10,5 +10,6 @@ jenkins:
       - id: ${ADMIN_USERNAME}
         password: ${ADMIN_PASSWORD}
         name: "Thomas Holmes"
+        properties:
         - timezone:
             timeZoneName: "Europe/London"
